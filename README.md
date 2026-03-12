@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # Programacion III
 ### Ejercicios de Elixir - Programacion 3
@@ -22,6 +22,8 @@ Aqui se practican conceptos base de programacion funcional:
 - funciones privadas y publicas
 - uso de `if`, `case`, `cond` y guardas (`when`)
 - composicion con `pipe` (`|>`)
+- estructuras de datos: listas, tuplas y mapas
+- operaciones sobre colecciones con `Enum`
 
 ---
 
@@ -33,6 +35,7 @@ Aqui se practican conceptos base de programacion funcional:
 | `Ejercicios/validador.exs` | Valida nombre de usuario con varias reglas acumuladas. | pipelines, acumulacion de errores, tuplas |
 | `Ejercicios/parqueadero.exs` | Calcula tarifa base y descuentos de parqueadero. | guardas, `case`, `cond`, calculo de porcentajes |
 | `Ejercicios/util.ex` | Funciones auxiliares para entrada y salida en consola. | reutilizacion de codigo, conversion de tipos |
+| `Ejercicios/crud_estudiantes.exs` | CRUD completo de estudiantes por consola. | listas, tuplas, mapas, `Enum`, modulo `Util` |
 
 ---
 
@@ -46,6 +49,7 @@ Comandos (desde la raiz del repositorio):
 elixir Ejercicios/saludador.exs
 elixir Ejercicios/validador.exs
 elixir Ejercicios/parqueadero.exs
+elixir Ejercicios/crud_estudiantes.exs
 ```
 
 ---
@@ -59,7 +63,8 @@ Programacion III/
     ├── util.ex
     ├── saludador.exs
     ├── validador.exs
-    └── parqueadero.exs
+    ├── parqueadero.exs
+    └── crud_estudiantes.exs
 ```
 
 ---

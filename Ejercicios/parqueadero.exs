@@ -45,12 +45,17 @@ defmodule Parqueadero do
     descuento_total = sin_descuento - con_descuento
 
     # Salida final del sistema.
-    IO.puts("Horas: #{horas}")
-    IO.puts("Tarifa base (sin descuento): $#{sin_descuento}")
-    IO.puts("Descuento aplicado: $#{descuento_total}")
-    IO.puts("Total a pagar: $#{con_descuento}")
-    IO.puts("Tupla retornada: {#{sin_descuento}, #{con_descuento}}")
-    IO.puts("====================================")
+    generar_mensaje(horas, sin_descuento, descuento_total, con_descuento)
+  end
+
+  defp generar_mensaje(horas, sin_descuento, descuento_total, con_descuento) do
+    Util.mostrar_mensaje("==============FACTURA======================")
+    Util.mostrar_mensaje("Horas: #{horas}")
+    Util.mostrar_mensaje("Tarifa base (sin descuento): $#{sin_descuento}")
+    Util.mostrar_mensaje("Descuento aplicado: $#{descuento_total}")
+    Util.mostrar_mensaje("Total a pagar: $#{con_descuento}")
+    Util.mostrar_mensaje("Tupla retornada: {#{sin_descuento}, #{con_descuento}}")
+    Util.mostrar_mensaje("====================================")
   end
 
   # Calcula la tarifa base según horas de permanencia.

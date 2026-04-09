@@ -37,7 +37,7 @@ defmodule Recursividad do
   Dice si n es potencia de b.
   """
   def es_potencia?(n, b) when not is_integer(n) or not is_integer(b), do: false
-  def es_potencia?(1, b) when Util.entero_positivo?(b), do: true
+  def es_potencia?(1, b) when is_integer(b) and b > 0, do: true
   def es_potencia?(n, 1) when is_integer(n), do: n == 1
   def es_potencia?(n, b) when n <= 0 or b <= 0, do: false
 
@@ -52,7 +52,7 @@ defmodule Recursividad do
   @doc """
   Dice si un numero es perfecto.
   """
-  def numero_perfecto?(n) when not Util.entero_positivo?(n), do: false
+  def numero_perfecto?(n) when not is_integer(n) or n <= 0, do: false
   def numero_perfecto?(1), do: false
 
   def numero_perfecto?(n) do
@@ -68,7 +68,7 @@ defmodule Recursividad do
   @doc """
   Dice si un numero positivo es reversible.
   """
-  def numero_reversible?(n) when not Util.entero_positivo?(n), do: false
+  def numero_reversible?(n) when not is_integer(n) or n <= 0, do: false
 
   def numero_reversible?(n) do
     invertido = invertir_numero(n, 0)

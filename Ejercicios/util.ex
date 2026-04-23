@@ -20,6 +20,19 @@ defmodule Util do
     |> String.to_float()
   end
 
+  def ingresar(mensaje, :real) do
+    ingresar(mensaje, :decimal)
+  end
+
+  def ingresar(mensaje, :boolean) do
+    valor =
+      mensaje
+      |> ingresar(:texto)
+      |> String.downcase()
+
+    Enum.member?(["si", "sí", "s"], valor)
+  end
+
   def mostrar_mensaje(mensaje) do
      IO.puts(mensaje)
   end
